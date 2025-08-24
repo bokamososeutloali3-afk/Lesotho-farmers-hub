@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us - Lesotho Hub</title>
+  <style>
+    /* Reset and base styles */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #2ebbdf 0%, #039a7a 100%);
+      color: #1a1a1a;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    /* Header */
+    header {
+      background-color: #1417c4;
+      max-width: 900px;
+      width: 100%;
+      margin: 30px auto 40px;
+      padding: 20px 0;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      user-select: none;
+    }
+
+    header h1 {
+      color: #fff;
+      font-size: 3.5rem;
+      margin: 0;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    /* Navigation */
+    nav.mycont {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 20px;
+      max-width: 900px;
+      width: 100%;
+      margin-bottom: 50px;
+      padding: 0 10px;
+    }
+
+    nav.mycont a {
+      display: block;
+      background-color: #0799ee;
+      color: white;
+      font-size: 1.2rem;
+      font-weight: 600;
+      padding: 15px 0;
+      border-radius: 12px;
+      text-align: center;
+      text-decoration: none;
+      box-shadow: 0 6px 10px rgba(7, 153, 238, 0.7);
+      transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+      user-select: none;
+    }
+
+    nav.mycont a:hover,
+    nav.mycont a:focus {
+      background-color: #0ea7d7;
+      color: #000;
+      transform: translateY(-4px);
+      box-shadow: 0 8px 14px rgba(14, 167, 215, 0.9);
+      outline: none;
+      cursor: pointer;
+    }
+
+    /* Main Content */
+    main.content {
+      background: #02bb93;
+      max-width: 900px;
+      width: 100%;
+      padding: 30px 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+      color: #073425;
+      line-height: 1.7;
+      font-size: 1.1rem;
+    }
+
+    main.content h2 {
+      color: #054d27;
+      font-size: 2rem;
+      margin-top: 0;
+      margin-bottom: 15px;
+      border-bottom: 3px solid #0a6a44;
+      padding-bottom: 8px;
+    }
+
+    main.content p {
+      margin-bottom: 25px;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.6rem;
+      }
+      main.content {
+        padding: 25px 20px;
+        font-size: 1rem;
+      }
+      nav.mycont {
+        gap: 15px;
+      }
+      nav.mycont a {
+        font-size: 1rem;
+        padding: 12px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>About Us</h1>
+  </header>
+
+  <nav class="mycont" aria-label="Primary Navigation">
+    <a href="index.html" tabindex="0">Home</a>
+    <a href="BusinessPage.html" tabindex="0">Business</a>
+    <a href="aboutUs.html" tabindex="0">About Us</a>
+    <a href="contactUs.html" tabindex="0">Contact Us</a>
+    <a href="Tips.html" tabindex="0">Tips</a>
+  </nav>
+
+  <main class="content" role="main">
+    <section>
+      <h2>About Us</h2>
+      <p>Lesotho Hub is a dedicated platform committed to delivering essential information, valuable resources, and exciting opportunities to the people of Lesotho. We strive to empower both individuals and communities by providing easy access to knowledge and fostering meaningful connections.</p>
+    </section>
+
+    <section>
+      <h2>Our Vision</h2>
+      <p>We aim to establish a centralized space where Basotho can effortlessly find business insights, educational content, practical life tips, and opportunities that promote both personal and professional development.</p>
+    </section>
+
+    <section>
+      <h2>Our Services</h2>
+      <p>Lesotho Hub offers an intuitive and welcoming platform where users can discover local businesses, access helpful advice, deepen their understanding of Lesotho, and stay up-to-date with relevant information. Our mission is to unite people and contribute to progress across all sectors of our nation.</p>
+    </section>
+
+    <section>
+      <h2>Why Partner With Us</h2>
+      <p>Our focus lies in authenticity, inclusivity, and community advancement. Whether you're a student, entrepreneur, or simply seeking useful information, Lesotho Hub is crafted to support and simplify your journey.</p>
+    </section>
+  </main>
+</body>
+</html>

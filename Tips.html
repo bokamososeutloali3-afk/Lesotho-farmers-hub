@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lesotho Hub</title>
+  <style>
+    /* Reset and base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #2f90ff 0%, #0a6bd6 100%);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 30px 15px;
+    }
+
+    /* Header */
+    h1 {
+      font-size: 3.5rem;
+      background-color: #139ddd;
+      padding: 15px 0;
+      width: 900px;
+      max-width: 100%;
+      margin: 20px auto 40px;
+      text-align: center;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      user-select: none;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    /* Navigation grid */
+    .mycont {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 20px;
+      max-width: 900px;
+      width: 100%;
+      margin-bottom: 50px;
+      padding: 0 10px;
+    }
+
+    .mycont a {
+      background-color: #0b57bb;
+      color: white;
+      font-size: 1.25rem;
+      font-weight: 600;
+      text-align: center;
+      text-decoration: none;
+      padding: 15px 10px;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(11, 87, 187, 0.7);
+      transition: background-color 0.3s ease, color 0.3s ease, transform 0.25s ease;
+      user-select: none;
+    }
+
+    .mycont a:hover,
+    .mycont a:focus {
+      background-color: #0f53e6;
+      color: #000;
+      transform: translateY(-4px);
+      box-shadow: 0 8px 18px rgba(15, 83, 230, 0.9);
+      outline: none;
+      cursor: pointer;
+    }
+
+    /* Tips Section */
+    .tips-section {
+      background: rgba(255, 255, 255, 0.95);
+      color: #1a1a1a;
+      max-width: 900px;
+      width: 100%;
+      border-radius: 20px;
+      padding: 30px 40px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      font-size: 1.15rem;
+      line-height: 1.7;
+      user-select: none;
+    }
+
+    .tips-section h2 {
+      margin-top: 0;
+      margin-bottom: 25px;
+      font-weight: 700;
+      color: #139ddd;
+      border-bottom: 3px solid #0b57bb;
+      padding-bottom: 8px;
+    }
+
+    .tips-section ul {
+      list-style: disc inside;
+      padding-left: 0;
+      margin: 0;
+    }
+
+    .tips-section li {
+      margin-bottom: 15px;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2.5rem;
+        padding: 12px 0;
+      }
+      .mycont a {
+        font-size: 1rem;
+        padding: 12px 10px;
+      }
+      .tips-section {
+        padding: 20px 25px;
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Welcome to Lesotho Hub Website</h1>
+
+  <nav class="mycont" aria-label="Primary Navigation">
+    <a href="index.html" tabindex="0">Home</a>
+    <a href="BusinessPage.html" tabindex="0">Business</a>
+    <a href="aboutUs.html" tabindex="0">About Us</a>
+    <a href="contactUs.html" tabindex="0">Contact Us</a>
+    <a href="Tips.html" tabindex="0">Tips</a>
+  </nav>
+
+  <section class="tips-section" aria-labelledby="tips-heading">
+    <h2 id="tips-heading">Helpful Tips for Basotho</h2>
+    <ul>
+      <li><strong>Start small, think big:</strong> If you’re starting a business, begin with what you can manage and scale gradually.</li>
+      <li><strong>Stay informed:</strong> Regularly check Lesotho Hub for updates on local business opportunities and community news.</li>
+      <li><strong>Invest in education:</strong> Use online resources and local courses to boost your skills and knowledge.</li>
+      <li><strong>Network actively:</strong> Connect with other entrepreneurs and community members to share ideas and support.</li>
+      <li><strong>Practice sustainable habits:</strong> Save resources and promote eco-friendly practices to protect our beautiful country.</li>
+    </ul>
+  </section>
+</body>
+</html>

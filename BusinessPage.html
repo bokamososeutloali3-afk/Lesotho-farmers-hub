@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lesotho Hub</title>
+  <style>
+    /* Reset and base styles */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #149dde 0%, #0a6ab0 100%);
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px 60px;
+    }
+
+    h1 {
+      font-size: 3.2rem;
+      max-width: 900px;
+      background-color: rgba(20, 171, 218, 0.85);
+      padding: 25px 0;
+      margin: 0 0 15px;
+      text-align: center;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      user-select: none;
+      transition: background-color 0.3s ease;
+    }
+
+    h1:hover {
+      background-color: rgba(28, 7, 216, 0.9);
+      cursor: default;
+    }
+
+    /* Navigation */
+    .mycont {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 20px;
+      max-width: 900px;
+      width: 100%;
+      padding: 0 10px;
+      margin-bottom: 40px;
+    }
+
+    .mycont a {
+      display: block;
+      text-decoration: none;
+      font-size: 1.2rem;
+      text-align: center;
+      padding: 15px 10px;
+      background-color: rgba(28, 7, 216, 0.8);
+      border-radius: 12px;
+      box-shadow: 0 5px 10px rgba(103, 7, 158, 0.6);
+      color: white;
+      font-weight: 600;
+      transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+      user-select: none;
+    }
+
+    .mycont a:hover,
+    .mycont a:focus {
+      background-color: rgba(103, 7, 158, 0.9);
+      color: #000;
+      transform: translateY(-4px);
+      box-shadow: 0 8px 16px rgba(103, 7, 158, 0.8);
+      outline: none;
+      cursor: pointer;
+    }
+
+    /* Hero section */
+    .hero {
+      max-width: 900px;
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 15px;
+      padding: 30px 40px;
+      text-align: center;
+      margin-bottom: 60px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+      user-select: none;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      font-weight: 700;
+      color: #f0f0f0;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      margin-bottom: 30px;
+      line-height: 1.5;
+      color: #d9e6f2;
+    }
+
+    .btn-primary {
+      background-color: #8e44ad;
+      color: white;
+      font-weight: 700;
+      padding: 15px 35px;
+      border: none;
+      border-radius: 40px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      box-shadow: 0 6px 15px rgba(142, 68, 173, 0.7);
+      transition: background-color 0.3s ease, transform 0.25s ease;
+      user-select: none;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus {
+      background-color: #732d91;
+      transform: translateY(-3px);
+      outline: none;
+    }
+
+    /* Products Section */
+    .products {
+      max-width: 900px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-bottom: 60px;
+    }
+
+    .product-card {
+      background: rgba(255, 255, 255, 0.95);
+      color: #1a1a1a;
+      border-radius: 18px;
+      padding: 25px 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      user-select: none;
+    }
+
+    .product-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+    }
+
+    .product-card img {
+      width: 150px;
+      height: 150px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      background-color: #ccc;
+      object-fit: cover;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    }
+
+    .product-card h3 {
+      margin: 0 0 15px;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #333;
+    }
+
+    .product-card p {
+      font-size: 1rem;
+      color: #555;
+      flex-grow: 1;
+      margin-bottom: 20px;
+      line-height: 1.4;
+    }
+
+    .product-card button {
+      background-color: #8e44ad;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      padding: 10px 25px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .product-card button:hover,
+    .product-card button:focus {
+      background-color: #732d91;
+      outline: none;
+    }
+
+    /* Footer */
+    footer {
+      max-width: 900px;
+      width: 100%;
+      text-align: center;
+      color: #d9d9d9;
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255,255,255,0.25);
+      padding: 20px 0 10px;
+      user-select: none;
+    }
+
+    footer a {
+      color: #8e44ad;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover,
+    footer a:focus {
+      color: #732d91;
+      outline: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2rem;
+        padding: 18px 0;
+      }
+      .mycont {
+        gap: 15px;
+      }
+      .mycont a {
+        font-size: 1rem;
+        padding: 12px 8px;
+      }
+      .hero h2 {
+        font-size: 1.8rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+      .products {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to Lesotho Hub</h1>
+
+  <nav class="mycont" aria-label="Primary Navigation">
+    <a href="index.html" tabindex="0">Home</a>
+    <a href="BusinessPage.html" tabindex="0">Business</a>
+    <a href="aboutUs.html" tabindex="0">About Us</a>
+    <a href="contactUs.html" tabindex="0">Contact Us</a>
+    <a href="Tips.html" tabindex="0">Tips</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" aria-label="Introduction to Lesotho Hub">
+    <h2>Your Gateway to Lesotho’s Growth & Opportunities</h2>
+    <p>Explore local businesses, discover valuable tips, and connect with a community dedicated to progress.</p>
+    <button class="btn-primary" onclick="alert('Explore Business Opportunities Coming Soon!')">Discover More</button>
+  </section>
+
+  <!-- Products Section -->
+  <section class="products" aria-label="Featured Products and Services">
+
+    <article class="product-card" tabindex="0">
+     <img src="hap.jpg" width="300" height="200">
+      <h3>fresh Greens</h3>
+      <p>This greens are a sign of Basotho's love for farming.</p>
+      <button onclick="alert('Added Handmade Crafts to your cart!')">Buy Now</button>
+    </article>
+
+    <article class="product-card" tabindex="0">
+      <img src="sip.jpg" width="300" height="200">
+      <h3>Organic Agriculture</h3>
+      <p>Fresh and organic produce from local farmers. Healthy choices directly from Lesotho’s fertile lands.</p>
+      <button onclick="alert('Added Organic Agriculture to your cart!')">Buy Now</button>
+    </article>
+
+   
+	
+  </footer>
+</body>
+</html>
